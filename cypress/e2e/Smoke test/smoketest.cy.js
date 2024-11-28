@@ -1,5 +1,5 @@
 describe('Smoke tests', () => {
-  it('Vérifie la présence des champs et boutons de connexion', () => {
+  it('Verifie la presence des champs et boutons de connexion', () => {
     cy.visit("http://localhost:8080/");
     cy.contains("Connexion").should("be.visible").click();
     cy.get('[data-cy="login-input-username"]').should("be.visible");
@@ -7,7 +7,8 @@ describe('Smoke tests', () => {
     cy.get('[data-cy="login-submit"]').should("be.visible");
   });
 
-  it("Vérifie la présence des boutons d’ajout au panier et du champ de disponibilité du produit", () => {
+  it("Verifie la presence des boutons d’ajout au panier et du champ de disponibilite du produit", () => {
+
     cy.visit("http://localhost:8080");
     cy.contains("Connexion").should("be.visible").click();
     cy.get('[data-cy="login-input-username"]').type("test2@test.fr");

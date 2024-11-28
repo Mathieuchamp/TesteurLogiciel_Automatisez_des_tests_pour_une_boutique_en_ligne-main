@@ -16,7 +16,7 @@ describe('Test Api Description produit by ID', () => {
         });
     });
 
-    it("Détail d'un produit aléatoire avec stock disponible", () => {
+    it("Detail d'un produit aleatoire avec stock disponible", () => {
         cy.request({
             method: "GET",
             url: `${apiUrl}/products`,
@@ -31,13 +31,19 @@ describe('Test Api Description produit by ID', () => {
 
             const randomProduct = availableProducts[Math.floor(Math.random() * availableProducts.length)];
 
-            expect(randomProduct).to.have.property("skin").that.is.a("string");
-            expect(randomProduct).to.have.property("aromas").that.is.a("string");
-            expect(randomProduct).to.have.property("ingredients").that.is.a("string");
-            expect(randomProduct).to.have.property("description").that.is.a("string");
-            expect(randomProduct).to.have.property("price").that.is.a("number");
-            expect(randomProduct).to.have.property("picture").that.is.a("string");
-            expect(randomProduct).to.have.property("varieties").that.is.a("number");
+            const expectedProductProperties = {
+                skin: "string",
+                aromas: "string",
+                ingredients: "string",
+                description: "string",
+                price: "number",
+                picture: "string",
+                varieties: "number",
+              };
+              Object.entries(expectedProductProperties).forEach(([property, type]) => {
+                expect(randomProduct).to.have.property(property).that.is.a(type);
+              });
+                           
 
             cy.request({
                 method: "GET",
@@ -47,7 +53,7 @@ describe('Test Api Description produit by ID', () => {
                 },
             }).then((productResponse) => {
                 expect(productResponse.status).to.eq(200);
-                cy.log("Détail du produit récupéré avec succès :", productResponse.body);
+                cy.log("Detail du produit récupere avec succes :", productResponse.body);
             });
         });
     });

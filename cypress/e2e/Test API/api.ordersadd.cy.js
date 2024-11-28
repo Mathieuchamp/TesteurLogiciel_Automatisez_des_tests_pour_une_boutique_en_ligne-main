@@ -48,7 +48,7 @@ describe('Test Api ajout produit', () => {
                 },
             }).then((addResponse) => {
                 expect(addResponse.status).to.eq(200);
-                cy.log("Produit ajouté avec succès :", productResponse.body);
+                cy.log("Produit ajoute avec succes :", productResponse.body);
             });
         });
     });
@@ -68,7 +68,7 @@ describe('Test Api ajout produit', () => {
         }).then((addResponse) => {
             expect(addResponse.status).to.eq(200);
             expect(addResponse.body).to.have.property('orderLines');
-            cy.log("Produit ajouté avec succès :", addResponse.body);
+            cy.log("Produit ajoute avec succes :", addResponse.body);
         });
     });
 });

@@ -1,7 +1,7 @@
-describe("Accèder aux données confidentielles d'un utilisateur avant connexion", () => {
+describe("Acceder aux donnees confidentielles d'un utilisateur avant connexion", () => {
 
 
-  it("Devrait vérifier que je reçois une erreur 401 avant connexion", () => {
+  it("Devrait verifier que je reçois une erreur 401 à l acces au panier avant connexion", () => {
     cy.request({
       method: "GET",
       url: `${Cypress.env("apiUrl")}/orders`,
@@ -12,7 +12,7 @@ describe("Accèder aux données confidentielles d'un utilisateur avant connexion
     });
   });
   
-  it('Devrait se connecter avec succès avec des identifiants valides', () => {
+  it('Devrait avoir acces au panier avec des identifiants valides', () => {
     const apiLogin = `${Cypress.env("apiUrl")}/login`;
     
     cy.request({
@@ -40,7 +40,7 @@ describe("Accèder aux données confidentielles d'un utilisateur avant connexion
     });
   });
 
-  it("Devrait vérifier qu'un utilisateur non authentifié reçoit une erreur 403 lorsqu'il tente d'accéder au panier", () => {
+  it("Devrait verifier qu'un utilisateur non authentifie reçoit une erreur 403 lorsqu il tente d'acceder au panier d'un autre utilisateur", () => {
     cy.request({
       method: "GET",
       url: `${Cypress.env("apiUrl")}/orders`,

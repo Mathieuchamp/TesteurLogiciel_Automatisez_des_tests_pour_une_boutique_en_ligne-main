@@ -1,6 +1,6 @@
 describe('Test Api connexion', () => {
   const apiLogin = `${Cypress.env("apiUrl")}/login`;
-  it('Devrait se connecter avec succès avec des identifiants valides', () => {
+  it('Devrait se connecter avec succes avec des identifiants valides', () => {
     cy.request({
       method: "POST",
       url: apiLogin,
@@ -14,7 +14,7 @@ describe('Test Api connexion', () => {
     });
   });
 
-  it("Devrait échouer avec un code d'erreur 401 pour des identifiants invalides", () => {
+  it("Devrait echouer avec un code d'erreur 401 pour des identifiants invalides", () => {
     cy.request({
       method: "POST",
       url: apiLogin,
@@ -27,7 +27,7 @@ describe('Test Api connexion', () => {
       expect(response.status).to.equal(401);
       expect(response.body).to.deep.equal({
         code: 401,
-        message: "Invalid credentials.",
+        message: "Identifiants invalides",
       });
     });
   });

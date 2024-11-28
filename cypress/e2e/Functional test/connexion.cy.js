@@ -1,5 +1,5 @@
 describe("Connexion", () => {
-  it("Devrait se connecter avec succès et afficher le bouton panier", () => {
+  it("Devrait se connecter avec succes et afficher le bouton panier", () => {
     cy.visit("http://localhost:8080/");
     cy.contains("Connexion").should("be.visible").click();
     cy.get('[data-cy="login-input-username"]').type("test2@test.fr");

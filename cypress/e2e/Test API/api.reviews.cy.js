@@ -19,7 +19,7 @@ describe('Ajouter un avis', () => {
     it("Ajouter un avis complet", () => {
         const ReviewData = {
             title: "Test au top",
-            comment: "Très satisfait de ce produit.",
+            comment: "Tres satisfait de ce produit.",
             rating: 5,
         };
 
