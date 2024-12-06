@@ -12,7 +12,7 @@ Génération du Rapport
 4. Les deux scénarios fonctionnels critiques choisis.
 
 ## Installation Docker
-1. Installez Docker:   Docker pour Mac => https://docs.docker.com/desktop/setup/install/mac-install/
+1. Installez Docker:   Docker pour Mac => https://docs.docker.com/desktop/setup/install/mac-install/  
                     Docker pour Windows => https://docs.docker.com/desktop/setup/install/windows-install/ ;
 2. Téléchargez le projet => https://github.com/OpenClassrooms-Student-Center/TesteurLogiciel_Automatisez_des_tests_pour_une_boutique_en_ligne ;
 3. Téléchargez ou clonez le dépôt
