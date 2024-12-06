@@ -1,9 +1,9 @@
 # Automatisez des tests pour une boutique en ligne
-Objectifs
-Installation Docker
-Ouvrir Cypress via npm
-Exécuter les tests en ligne de commande
-Génération du Rapport
+Objectifs  
+Installation Docker  
+Ouvrir Cypress via npm  
+Exécuter les tests en ligne de commande  
+Génération du Rapport  
 
 ## Objectifs
 1. Rédiger des scripts de test en JavaScript avec Cypress pour :
@@ -41,7 +41,7 @@ Nb : à l'étape 2, ne pas ajouter le `sudo` si vous êtes sous Windows (sauf de
 
 1. Assurez-vous d'avoir installé les dépendances nécessaires pour la génération du rapport :
 npm install mochawesome mochawesome-merge mochawesome-report-generator cypress-multi-reporters --save-dev
-2. Exécutez les commandes suivantes dans votre terminal :
-        Pour exécuter les tests Cypress et générer des rapports individuels : npm run cypress:run
-        Pour fusionner les rapports générés : npm run merge:reports
-        Pour générer le rapport final en HTML : npm run generate:report
+2. Exécutez les commandes suivantes dans votre terminal :  
+        Pour exécuter les tests Cypress et générer des rapports individuels : npm run cypress:run  
+        Pour fusionner les rapports générés : npm run merge:reports  
+        Pour générer le rapport final en HTML : npm run generate:report  
