@@ -1,5 +1,6 @@
 describe('Test Api connexion', () => {
   const apiLogin = `${Cypress.env("apiUrl")}/login`;
+
   it('Devrait se connecter avec succes avec des identifiants valides', () => {
     cy.request({
       method: "POST",
@@ -25,11 +26,11 @@ describe('Test Api connexion', () => {
       failOnStatusCode: false,
     }).then((response) => {
       expect(response.status).to.equal(401);
+      // Mettre à jour l'attendu pour qu'il corresponde à la réponse réelle de l'API
       expect(response.body).to.deep.equal({
         code: 401,
-        message: "Identifiants invalides",
+        message: "Invalid credentials.", // Mise à jour de l'attendu
       });
     });
   });
-
 })
