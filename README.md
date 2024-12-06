@@ -30,13 +30,13 @@ Nb : à l'étape 2, ne pas ajouter le `sudo` si vous êtes sous Windows (sauf de
 
 ## Exécuter les tests en ligne de commande
 
-1. Depuis un terminal ouvert dans le dossier du projet, lancer la commande: 
-                npx cypress run => Tests non interactifs
-                npx cypress open => Test sur Cypress via navigateurs
-                                    Cliquez sur le bouton E2E Testing.
-                                    Choisissez votre navigateur préféré
-                                    Suivez les instructions pour "Create new spec"
-                                    Vous pouvez céer les fichiers de test directement dans le dossier e2e.
+1. Depuis un terminal ouvert dans le dossier du projet, lancer la commande:  
+                npx cypress run => Tests non interactifs  
+                npx cypress open => Test sur Cypress via navigateurs  
+                                    Cliquez sur le bouton E2E Testing  
+                                    Choisissez votre navigateur préféré  
+                                    Suivez les instructions pour "Create new spec"  
+                                    Vous pouvez céer les fichiers de test directement dans le dossier e2e  
 ## Génération du Rapport
 
 1. Assurez-vous d'avoir installé les dépendances nécessaires pour la génération du rapport :
